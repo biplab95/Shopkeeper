@@ -1,0 +1,34 @@
+body{
+background:#eee;
+}
+
+
+
+.myform form{
+    width: 40%;
+    margin: auto;
+    background: #fff;
+    padding: 88px;
+    border-radius: 6px;
+}
+
+.myform{
+    background: #f2f2f2;
+    width: 100%;
+    float: left;
+
+}
+
+.myform label{
+display:block;
+width:100%;
+padding:10px 0px;
+
+}
+
+.myform input{
+background:#fff;
+width:100%;
+float:left;
+}
+

@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% block content%}
+    <!-- navbar-->
+    {% include 'header.html'%}
+    <div class="d-flex align-items-stretch">
+
+        {% include 'side.html'%}
+
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+            <br></br>
+
+            <div class="card">
+                  <div class="card-header">
+                    <h6 class="text-uppercase mb-0">Basic Table</h6>
+                  </div>
+                  <div class="card-body">
+                    <table class="table card-text">
+                        {% if messages %}
+<ul class="messages alert alert-success">
+    {% for message in messages %}
+    <div{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+                        <form method="post">
+                         {% csrf_token %}
+
+
+                            {{form}}
+                        <tr>
+                            <td> <input type="submit" class="btn btn-success"></td>
+                        </tr>
+
+                    </form>
+                    </table>
+                  </div>
+                </div>
+
+
+
+
+
+        </div>
+        <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-left text-primary">
+                <p class="mb-2 mb-md-0">Your company &copy; 2018-2020</p>
+              </div>
+              <div class="col-md-6 text-center text-md-right text-gray-400">
+                <p class="mb-0">Design by <a href="https://bootstrapious.com/admin-templates" class="external text-gray-400">Bootstrapious</a></p>
+                <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+
+{% endblock %}
